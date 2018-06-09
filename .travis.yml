@@ -1,0 +1,15 @@
+sudo: required
+
+language: generic
+
+services:
+  - docker
+
+script:
+  - docker build -t gregoireweber/drupal-example:latest .
+  - if [ "$TRAVIS_BRANCH" == "master" ]; then
+      docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
+      docker tag gregoireweber/drupal-example:latest gregoireweber/drupal-example:"$TRAVIS_BUILD_NUMBER";
+      docker push gregoireweber/drupal-example:latest;
+      docker push gregoireweber/drupal-example:"$TRAVIS_BUILD_NUMBER";
+    fi
