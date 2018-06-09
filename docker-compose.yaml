@@ -1,0 +1,47 @@
+version: '3.1'
+
+services:
+
+  drupal-php:
+    image: gregoireweber/docker-drupal:latest
+    restart: unless-stopped
+    volumes:
+      - drupal-code:/var/www/html
+    depends_on:
+      - drupal-db
+    environment:
+      - MYSQL_HOST=drupal-db
+      - MYSQL_DATABASE=drupal
+      - MYSQL_USER=drupal
+      - MYSQL_PASSWORD=drupal
+      - ADMIN_USERNAME=admin
+      - ADMIN_PASSWORD=password
+
+  drupal-web:
+    image: drupaldocker/nginx
+    restart: unless-stopped
+    ports:
+      - 8080:80
+    volumes:
+      - drupal-code:/var/www/html:ro
+    depends_on:
+      - drupal-php
+    external_links:
+      - drupal-php:php
+
+  drupal-db:
+    image: mariadb
+    restart: unless-stopped
+    environment:
+      - MYSQL_RANDOM_ROOT_PASSWORD=yes
+      - MYSQL_DATABASE=drupal
+      - MYSQL_USER=drupal
+      - MYSQL_PASSWORD=drupal
+    volumes:
+      - drupal-database:/var/lib/mysql
+
+volumes:
+  drupal-database:
+    driver: local
+  drupal-code:
+    driver: local
