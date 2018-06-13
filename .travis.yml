@@ -12,4 +12,10 @@ script:
       docker tag gregoireweber/drupal-example:latest gregoireweber/drupal-example:"$TRAVIS_BUILD_NUMBER";
       docker push gregoireweber/drupal-example:latest;
       docker push gregoireweber/drupal-example:"$TRAVIS_BUILD_NUMBER";
+      docker ps -a;
+      docker-compose pull;
+      docker-compose up -d;
     fi
+
+before_install:
+- openssl aes-256-cbc -K $encrypted_43b1fb194bab_key -iv $encrypted_43b1fb194bab_iv -in docker-certs/key.pem.enc -out docker-certs/key.pem -d
