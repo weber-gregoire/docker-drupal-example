@@ -1,12 +1,10 @@
-version: '3.1'
+version: '2'
 
 services:
 
   drupal-php:
     image: gregoireweber/drupal-example:latest
     restart: unless-stopped
-    volumes:
-      - drupal-code:/var/www/html
     depends_on:
       - drupal-db
     environment:
@@ -22,8 +20,8 @@ services:
     restart: unless-stopped
     ports:
       - 80:80
-    volumes:
-      - drupal-code:/var/www/html:ro
+    volumes_from:
+      - drupal-php
     depends_on:
       - drupal-php
     external_links:
@@ -42,6 +40,4 @@ services:
 
 volumes:
   drupal-database:
-    driver: local
-  drupal-code:
     driver: local
