@@ -58,11 +58,11 @@ html {
   box-sizing: inherit; }
 
 ::-moz-selection {
-  background: #2ba9e0;
+  background: #BB0000;
   color: #fff; }
 
 ::selection {
-  background: #2ba9e0;
+  background: #BB0000;
   color: #fff; }
 
 body {
@@ -162,7 +162,7 @@ em {
   color: #424242; }
 
 a {
-  color: #ff5027;
+  color: #BB0000;
   transition: .5s;
   text-decoration: none; }
   a:hover {
@@ -187,7 +187,7 @@ a {
   margin: 0 0 2rem;
   border: 1px solid #eeeeee; }
   .messages.messages--status {
-    border-color: #2ba9e0; }
+    border-color: #BB0000; }
 
 input[type="text"],
 input[type="email"],
@@ -207,7 +207,7 @@ textarea {
   transition: border 0.3s;
   font-size: 14px;
   font-size: 0.875rem;
-  color: #2ba9e0;
+  color: #BB0000;
   font-family: "Roboto", Helvetica, Arial, sans-serif;
   font-weight: 100; }
 
@@ -226,7 +226,7 @@ input[type="submit"] {
   letter-spacing: 1px;
   transition: all 0.3s; }
   input[type="submit"]:hover {
-    background: #2ba9e0;
+    background: #BB0000;
     color: #fff; }
 
 input[type="text"]:focus,
@@ -235,7 +235,7 @@ input[type="password"]:focus,
 select:focus,
 textarea:focus {
   outline: none;
-  border-color: #2ba9e0; }
+  border-color: #BB0000; }
 
 input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0px 1000px white inset; }
@@ -248,7 +248,7 @@ select {
   border-radius: 0;
   background-color: #fff;
   background: url(../icons/chevron-down.svg) no-repeat 99% 50%;
-  color: #2ba9e0;
+  color: #BB0000;
   box-shadow: none;
   border-radius: none;
   transition: border 0.3s;
@@ -512,7 +512,7 @@ pre[class*="language-"] {
   fill: #9e9e9e;
   transition: all .3s; }
   .logo-svg:hover {
-    fill: #2ba9e0; }
+    fill: #BB0000; }
 
 .header-main .menu {
   display: none; }
@@ -535,7 +535,7 @@ pre[class*="language-"] {
     text-transform: uppercase;
     color: #9e9e9e; }
     .header-main .menu li a:hover {
-      color: #2ba9e0; }
+      color: #BB0000; }
 
 /**
 *
@@ -559,7 +559,7 @@ pre[class*="language-"] {
     fill: #9e9e9e;
     transition: all .3s; }
     .footer-main .twitter:hover {
-      fill: #2ba9e0; }
+      fill: #BB0000; }
   .footer-main .top-link {
     display: block;
     float: right; }
@@ -736,7 +736,7 @@ pre[class*="language-"] {
     fill: #bdbdbd;
     transition: all .3s; }
   .cover .cover-title:hover .drupal-logo path {
-    fill: #2ba9e0; }
+    fill: #BB0000; }
   .cover .intro-title {
     font-size: 20px;
     font-size: 1.25rem;
@@ -806,7 +806,7 @@ pre[class*="language-"] {
         font-size: 17px;
         font-size: 1.0625rem; } }
     .features .feature-list li:hover .checkbox {
-      fill: #2ba9e0; }
+      fill: #BB0000; }
     .features .feature-list li .checkbox {
       display: none;
       fill: #bdbdbd; }
@@ -846,7 +846,7 @@ pre[class*="language-"] {
     border: 1px solid #eeeeee;
     background: #fff; }
     .icons .icon-box:hover .icon {
-      fill: #2ba9e0; }
+      fill: #BB0000; }
   .icons .icon {
     width: 32px;
     height: 32px;
@@ -880,7 +880,7 @@ pre[class*="language-"] {
     .posts .views-row:last-child {
       border: none; }
     .posts .views-row:hover {
-      background: #2ba9e0; }
+      background: #BB0000; }
     .posts .views-row:hover .date,
     .posts .views-row:hover p a,
     .posts .views-row:hover h2 a {
@@ -985,7 +985,7 @@ pre[class*="language-"] {
     fill: #bdbdbd;
     transition: all .3s; }
   .news .contain:hover .drupal-logo path {
-    fill: #2ba9e0; }
+    fill: #BB0000; }
 
 /**
 *
@@ -1017,7 +1017,7 @@ pre[class*="language-"] {
   .source .heart {
     width: 13px;
     height: 13px;
-    fill: #ff5027;
+    fill: #BB0000;
     display: inline-block;
     -webkit-animation: pulsate 2s linear infinite;
             animation: pulsate 2s linear infinite;
@@ -1070,7 +1070,7 @@ pre[class*="language-"] {
 .page-blog-view a {
   color: #616161; }
   .page-blog-view a:hover {
-    color: #ff5027; }
+    color: #BB0000; }
 
 /**
 *
